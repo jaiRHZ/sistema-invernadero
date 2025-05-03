@@ -5,8 +5,6 @@
 package data_impl;
 
 
-import com.mycompany.simulador_sensores.data.DataSen;
-import com.mycompany.simulador_sensores.data.impl.unit.TemperatureUnit;
 import data.Data_Sensores;
 import data_impl_unit.TemperatureUnit;
 import lombok.AllArgsConstructor;
@@ -17,7 +15,7 @@ import lombok.NoArgsConstructor;
 /**
  * Class that defines the temperature for sensors
  *
- * @author daniel
+ * @author Juan Diego Sánchez
  */
 @Data
 @Builder

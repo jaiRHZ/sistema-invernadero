@@ -16,7 +16,7 @@ import sensor.Sensor;
 
 /**
  *
- * @author daniel
+ * @author Juan Diego Sánchez
  */
 public class SensorDAOImpl implements SensorDAO {
 

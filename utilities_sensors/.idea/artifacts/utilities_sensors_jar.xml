@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="utilities_sensors:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/utilities_sensors_jar</output-path>
+    <root id="archive" name="utilities_sensors.jar">
+      <element id="module-output" name="utilities_sensors" />
+    </root>
+  </artifact>
+</component>

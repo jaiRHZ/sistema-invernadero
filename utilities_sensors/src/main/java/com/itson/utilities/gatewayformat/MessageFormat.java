@@ -10,7 +10,6 @@ import com.itson.utilities.gatewayformat.Data;
 /**
  * Clase MessageFormat
  * Representa el formato de un mensaje recibido o enviado desde un gateway (puerta de enlace),
- * utilizado posiblemente en sistemas IoT o de monitoreo.
  */
 public class MessageFormat {
 

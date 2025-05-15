@@ -15,7 +15,7 @@ import java.awt.*;
  *
  * @author jairo-rhz
  */
-public class Monitor extends javax.swing.JFrame {
+public class Monitor extends javax.swing.JFrame implements Observable{
 
     protected final Gateway gateway;
     private final Principal principal;
@@ -31,7 +31,7 @@ public class Monitor extends javax.swing.JFrame {
         initComponents();
         this.gateway = gateway;
         this.principal = principal;
-        gateway.addObservable((Observable) this);
+        gateway.addObservable(this);
         cargarDatosPantalla();
         validarStatus();
     }

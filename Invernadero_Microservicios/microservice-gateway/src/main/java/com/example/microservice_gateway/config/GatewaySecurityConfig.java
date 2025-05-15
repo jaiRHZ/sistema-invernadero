@@ -12,7 +12,7 @@ public class GatewaySecurityConfig {
 
         return builder.routes().
                 route("api/sensor",m -> m.path("/api/sensor/**").uri("http://localhost:8083"))
-                .route("api/invernadero", m -> m.path("/api/invernadero/**").uri("http://localgost:8083")).build();
+                .route("api/invernadero", m -> m.path("/api/invernadero/**").uri("http://localgost:8084")).build();
     }
 
 }

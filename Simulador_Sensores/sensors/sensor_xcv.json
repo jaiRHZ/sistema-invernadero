@@ -1,0 +1,1 @@
+{"serie":"xcv","timeInterval":3,"status":false,"protocol":{"type":"coap","coapServerUri":"coap://localhost:5683/gateway_2"},"data":[{"type":"humidity","value":57.912647,"humidityUnit":"PENCENT"}],"captureData":"26-11-2024 13:56:33"}

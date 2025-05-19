@@ -1,0 +1,61 @@
+version: '3'
+
+volumes:
+  sensor_mysql_data:
+  alarma_mysql_data:
+  invernadero_mysql_data:
+
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.18
+    ports:
+      - "1884:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    restart: always
+
+  rabbitmq:
+    image: "rabbitmq:latest"
+    container_name: rabbitmq-container
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: 1234
+
+  mysql-sensor:
+    image: mysql:latest
+    container_name: mysql-sensor
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: sensor_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - sensor_mysql_data:/var/lib/mysql
+
+  mysql-alarma:
+    image: mysql:latest
+    container_name: mysql-alarma
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: alarma_db
+    ports:
+      - "3308:3306"
+    volumes:
+      - alarma_mysql_data:/var/lib/mysql
+
+  mysql-invernadero:
+    image: mysql:latest
+    container_name: mysql-invernadero
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: invernadero_db
+    ports:
+      - "3309:3306"
+    volumes:
+      - invernadero_mysql_data:/var/lib/mysql

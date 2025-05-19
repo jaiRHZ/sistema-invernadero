@@ -1,0 +1,7 @@
+
+b	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(©ýÉä8°÷ÆÑ¶2
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8­å¡Ð¶2J$9758d07c-2787-4c49-ad7d-b90dd4d96010
+r	java:S106#"+Replace this use of System.out by a logger.(¯Ï‘©ÿÿÿÿÿ8•±¡Ð¶2J$1dabb285-7fa7-4f41-836f-3bc0583e9ca3
+‰
+java:S1130("lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(©ýÉä8ê÷ÆÑ¶2

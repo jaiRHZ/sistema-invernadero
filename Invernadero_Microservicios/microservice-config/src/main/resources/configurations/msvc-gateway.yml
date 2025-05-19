@@ -1,0 +1,33 @@
+
+
+server:
+  port: 8080
+
+spring:
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
+  application:
+    name: msvc-gateway
+  eureka:
+    instance:
+      hostname: localhost
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: sensors
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/sensor/**
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9000/.well-known/jwks.json
+

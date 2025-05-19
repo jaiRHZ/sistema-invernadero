@@ -1,0 +1,7 @@
+
+spring:
+  application:
+    name: msvc-sensors
+  config:
+    import: optional:configserver:http://localhost:8888
+

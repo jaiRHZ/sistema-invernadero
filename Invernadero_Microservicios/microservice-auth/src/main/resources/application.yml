@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+spring:
+  cloud:
+    compatibility-verifier:
+      enabled: false
+  application:
+    name: microservice-auth
+  datasource:
+    url: jdbc:mysql://localhost:3308/usuario_db
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

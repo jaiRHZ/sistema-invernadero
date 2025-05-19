@@ -1,0 +1,5 @@
+# Created at 2025-05-19T00:22:30.034
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Nueva carpeta\sistema-invernadero\Simulador_Sensores\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

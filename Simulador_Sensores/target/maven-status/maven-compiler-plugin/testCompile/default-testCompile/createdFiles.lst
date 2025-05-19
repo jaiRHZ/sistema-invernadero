@@ -1,0 +1,4 @@
+test\CoapProtocolTest.class
+test\MqttProtocolTest.class
+test\CoapClientTest.class
+test\CoapProtocolTest$1.class

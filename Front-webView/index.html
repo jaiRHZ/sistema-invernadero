@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gestión de Sensores</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sistema de Gestión de Sensores</h1>
+    </header>
+
+    <div class="container">
+      <div id="notification" style="display: none"></div>
+
+      <div class="tabs">
+        <div class="tab active" data-tab="sensors-list">Lista de Sensores</div>
+        <div class="tab" data-tab="new-sensor">Nuevo Sensor</div>
+      </div>
+
+      <div id="sensors-list" class="tab-content active">
+        <div class="card">
+          <h2>Sensores Registrados</h2>
+          <button id="refresh-sensors">Actualizar Lista</button>
+          <div id="sensors-loading" class="loading">
+            <div class="spinner"></div>
+            <p>Cargando sensores...</p>
+          </div>
+          <div id="sensors-table-container" style="display: none">
+            <table id="sensors-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                  <th>Ubicación</th>
+                  <th>Última Lectura</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="sensors-table-body">
+                <!-- Datos de sensores se cargarán aquí -->
+              </tbody>
+            </table>
+          </div>
+          <div id="no-sensors" style="display: none">
+            <p>No hay sensores registrados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="new-sensor" class="tab-content">
+        <div class="card">
+          <h2>Registrar Nuevo Sensor</h2>
+          <form id="sensor-form">
+            <div class="form-group">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="type">Tipo:</label>
+              <select id="type" name="type" required>
+                <option value="">Seleccionar...</option>
+                <option value="TEMPERATURE">Temperatura</option>
+                <option value="HUMIDITY">Humedad</option>
+                <option value="PRESSURE">Presión</option>
+                <option value="LIGHT">Luz</option>
+                <option value="MOTION">Movimiento</option>
+                <option value="OTHER">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Ubicación:</label>
+              <input type="text" id="location" name="location" required />
+            </div>
+            <div class="form-group">
+              <label for="description">Descripción:</label>
+              <textarea id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="interval">Intervalo de Lectura (segundos):</label>
+              <input
+                type="number"
+                id="interval"
+                name="interval"
+                min="1"
+                value="60"
+              />
+            </div>
+            <button type="submit">Registrar Sensor</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
